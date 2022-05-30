@@ -22,10 +22,6 @@ function change(e) {
     created_div.appendChild(created_span);
     created_div.appendChild(created_btn);
     body.appendChild(created_div);
-    // 텍스트 + 버튼 -> div
-    // div.appendChild()
-    // p 태그보다는 span 태그. inline 형식 참고
-    // displayinline 스타일
 }
 
 button.addEventListener('click', click);
