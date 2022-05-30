@@ -12,10 +12,20 @@ function click(e) {
 
 function change(e) {
     console.log(e.target.value);
-    // 여러 개를 만들렴녀 여기서 선언하면 됨
-    const created_p = document.createElement('p');
-    created_p.innerText = e.target.value;
-    body.appendChild(created_p);
+    // 여러 개를 만들려면 여기서 선언하면 됨
+    const created_div = document.createElement('div');
+    // span은 p와 달리 inline이기 때문에 한 줄을 통째로 점유하지 않는다.
+    const created_span = document.createElement('span');
+    const created_btn = document.createElement('button');
+    created_span.innerText = e.target.value;
+    created_btn.innerText = '삭제';
+    created_div.appendChild(created_span);
+    created_div.appendChild(created_btn);
+    body.appendChild(created_div);
+    // 텍스트 + 버튼 -> div
+    // div.appendChild()
+    // p 태그보다는 span 태그. inline 형식 참고
+    // displayinline 스타일
 }
 
 button.addEventListener('click', click);
